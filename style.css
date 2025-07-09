@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  margin: 20px 20px 20px 60px;
+  background-color: #f1f1f1;
+  color: #222;
+}
+
+h1 {
+  font-size: 20pt;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#checkinCount {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-left: 10px;
+  color: black;
+}
+
+/* 🔤 Vertical A–Z Sidebar */
+#azSidebar {
+  position: fixed;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  width: 44px;
+  background-color: #eee;
+  border-right: 1px solid #ccc;
+  padding: 8px 4px;
+  z-index: 95;
+  overflow-y: auto;
+}
+
+#verticalLetterBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px; /* tighter spacing */
+}
+
+.jumpLetter {
+  font-weight: bold;
+  font-size: 12pt;
+  color: #02520B;
+  cursor: pointer;
+  padding: 4px; /* tighter padding */
+  text-align: center;
+  user-select: none;
+  border-radius: 4px;
+}
+
+.jumpLetter.active {
+  background-color: #02520B;
+  color: #fff;
+}
+
+/* 🧾 Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  table-layout: fixed;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+thead th {
+  position: sticky;
+  top: 40px;
+  background-color: #02520B;
+  color: #fff;
+  padding: 12px 8px;
+  border: 1px solid #999;
+  z-index: 97;
+  font-size: 12pt;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+tfoot {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+}
+
+tfoot td {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  padding: 10px 8px;
+  font-size: 12pt;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #999;
+}
+
+td {
+  border: 1px solid #999;
+  text-align: center;
+  background-color: #fafafa;
+  padding: 10px 6px;
+  font-size: 12pt;
+}
+
+td.playerName {
+  text-align: left;
+  padding-left: 10px;
+}
+
+td.rowTotal {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+/* 🦓 Zebra striping */
+tbody tr:nth-child(even) td {
+  background-color: #e4f2e1;
+}
+
+tbody tr:nth-child(odd) td {
+  background-color: #cfe8cd;
+}
+
+/* 🔒 Disable interactions when paid or capped */
+.row-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* ✅ Checkbox Scaling */
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin: 4px;
+}
+
+input.paid:checked {
+  accent-color: red;
+}
+
+/* ➕ Add-On Entry */
+#addonEntry {
+  margin-top: 8px;
+  font-size: 12pt;
+}
+
+#addonEntry input {
+  width: 40px;
+  text-align: center;
+  margin: 0 4px;
+  padding: 4px;
+}
+
+/* 📊 Mini Summary */
+#miniSummary {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+  background-color: #fff;
+  font-size: 12pt;
+}
+
+#miniSummary th,
+#miniSummary td {
+  border: 1px solid #999;
+  padding: 6px;
+  text-align: center;
+  background-color: #fdfdfd;
+  font-size: 12pt;
+}
+
+#miniSummary th {
+  background-color: #02520B;
+  color: white;
+  font-weight: bold;
+}
+
+#miniSummary td#miniBountyCount {
+  font-weight: bold;
+}
+
+/* ➕ Add Player Form (bottom) */
+#addPlayerForm {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+#addPlayerForm input {
+  padding: 6px;
+  font-size: 12pt;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#addPlayerForm button {
+  padding: 6px 12px;
+  font-size: 12pt;
+  background-color: #02520B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#addPlayerForm button:hover {
+  background-color: #018010;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PennyTracker Check-In</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="azSidebar">
+    <div id="verticalLetterBar">
+      <span class="jumpLetter" data-letter="A">A</span>
+      <span class="jumpLetter" data-letter="B">B</span>
+      <span class="jumpLetter" data-letter="C">C</span>
+      <span class="jumpLetter" data-letter="D">D</span>
+      <span class="jumpLetter" data-letter="E">E</span>
+      <span class="jumpLetter" data-letter="F">F</span>
+      <span class="jumpLetter" data-letter="G">G</span>
+      <span class="jumpLetter" data-letter="H">H</span>
+      <span class="jumpLetter" data-letter="I">I</span>
+      <span class="jumpLetter" data-letter="J">J</span>
+      <span class="jumpLetter" data-letter="K">K</span>
+      <span class="jumpLetter" data-letter="L">L</span>
+      <span class="jumpLetter" data-letter="M">M</span>
+      <span class="jumpLetter" data-letter="N">N</span>
+      <span class="jumpLetter" data-letter="O">O</span>
+      <span class="jumpLetter" data-letter="P">P</span>
+      <span class="jumpLetter" data-letter="Q">Q</span>
+      <span class="jumpLetter" data-letter="R">R</span>
+      <span class="jumpLetter" data-letter="S">S</span>
+      <span class="jumpLetter" data-letter="T">T</span>
+      <span class="jumpLetter" data-letter="U">U</span>
+      <span class="jumpLetter" data-letter="V">V</span>
+      <span class="jumpLetter" data-letter="W">W</span>
+      <span class="jumpLetter" data-letter="X">X</span>
+      <span class="jumpLetter" data-letter="Y">Y</span>
+      <span class="jumpLetter" data-letter="Z">Z</span>
+    </div>
+  </div>
+
+  <h1>
+    Penny Ante Poker Club – Tournament Check-In
+    <span id="checkinCount">(0 of 60)</span>
+  </h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Player Name</th>
+        <th>Select All</th>
+        <th>Buy-In<br>($40)</th>
+        <th>ToC<br>($2)</th>
+        <th>Bounty<br>($5)</th>
+        <th>High Hand<br>($5)</th>
+        <th>Total Due</th>
+        <th>Paid in Full</th>
+      </tr>
+    </thead>
+    <tbody id="playerRows"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"><strong>Totals:</strong></td>
+        <td id="buyinTotal">$0</td>
+        <td id="tocTotal">$0</td>
+        <td id="bountyTotal">$0</td>
+        <td id="highHandTotal">$0</td>
+        <td id="grandTotal">$0</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="8">
+          <div id="addonEntry">
+            Add-Ons: <input type="number" id="addonCount" min="0" value="0" />
+            × $10 = <span id="addonTotal">$0</span>
+          </div>
+          <table id="miniSummary">
+            <thead>
+              <tr>
+                <th>Buy-In Pool</th>
+                <th>ToC</th>
+                <th>Bounty ($)</th>
+                <th>Bounty Count</th>
+                <th>High Hand #1</th>
+                <th>High Hand #2</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="miniBuyinTotal">$0</td>
+                <td id="miniTocTotal">$0</td>
+                <td id="miniBountyTotal">$0</td>
+                <td id="miniBountyCount">0</td>
+                <td id="miniHH1Total">$0</td>
+                <td id="miniHH2Total">$0</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div id="addPlayerForm">
+    <input type="text" id="newName" placeholder="Full name" />
+    <input type="email" id="newEmail" placeholder="Email address" />
+    <button id="addPlayerBtn">Add</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
